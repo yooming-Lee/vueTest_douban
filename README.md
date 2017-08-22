@@ -3,7 +3,7 @@
 > A Vue.js project
 
 ## 效果图
-![效果图](https://github.com/Tomoaki-L/vueTest_douban/blob/master/src/assets/images/1.gif)
+![效果图](https://github.com/Tomoaki-L/vueTest_douban/blob/master/src/assets/images/01.gif)
 
 ### Build Setup
 
