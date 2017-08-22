@@ -1,0 +1,300 @@
+html,
+body,
+div,
+a,
+input,
+button,
+ol,
+ul,
+li,
+img,
+h1,
+h2,
+h3,
+span,
+p,
+b,
+s,
+i,
+dfn,
+::before,
+::after {
+    /* 清除内外边距 */
+    margin: 0;
+    padding: 0;
+    /* 清除移动端特有的点击高亮效果 */
+    -webkit-tap-highlight-color: transparent;
+    /* 设置所有的元素要以边框开始计算宽度 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;  /* 清除各浏览器默认最小字体，可自定义字体大小，且不受限与各浏览器 */
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */  /* 禁用文本的复制粘贴功能，在使用该属性后，用户将无法复制粘贴网站内的所有文本 */
+    text-shadow: none;
+}
+
+body {
+    font: 12px "Arial", "Microsoft Yahei", sans-serif;
+}
+
+input,
+textarea {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    -webkit-appearance: none;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+/* 清楚废弃标签的样式 */
+em,
+i,
+strong,
+b,
+s,
+dfn {
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*清除表单的一些样式、下间隙*/
+input,
+img,
+button {
+    border: 0 none;  /* IE浏览器只能先请清除默认的边框，再自定义边框，才能清除表单在获取焦点时的外边距*/
+    outline: none;  /* 清除表单在获得焦点时的外边框 */
+    -webkit-appearance: none; /* 移出移动端默认的表单样式 */
+    vertical-align: top;  /* 清除表单元素、图片的下间隙，使元素与内容顶部对齐 */
+}
+
+/* 清除列表前面的小点等样式 */
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+/* 清除 h类 标题标签的默认样式*/
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/* 设置a标签样式 */
+
+a {
+    color: #333;
+    font-weight: normal !important;
+    outline: 0;
+    cursor: pointer;
+    /*star: expression(this.onbanner=this.blur());*/
+    text-decoration: none;
+    color: #666;
+    /* -webkit-touch-callout: none;
+                                        1.ios 长按时不触发系统的菜单
+                                        2.ios 和 android 长按时禁止长按时下载图片
+                                    */
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #666;
+}
+
+/* 公用样式 */
+
+/* 设置浮动 */
+.f_l {
+    float: left;  /* 左浮动 */
+}
+
+.f_r {
+    float: right;  /* 右浮动 */
+}
+
+/*设置定位*/
+.p_f {
+    position: fixed;
+}
+
+.p_r {
+    position: relative;
+}
+
+.p_a {
+    position: absolute;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;  /* 兼容IE6 */
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+/* 设置文本对齐方式 */
+.t_c {
+    text-align: center;
+}
+
+.t_l {
+    text-align: left;
+}
+
+.t_l {
+    text-align: right;
+}
+
+.mt_10 {
+    margin-top: 10px;
+}
+
+.mt_12 {
+    margin-top: 12px;
+}
+
+.mt_22 {
+    margin-top: 22px !important;
+}
+
+.bg_eee {
+    background-color: #eee;
+}
+
+/* 三角图标 Begin： */
+.aBeforeLeft::before,
+.aBeforeRight::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-top: 2px solid #a8a8a8;
+    border-right: 2px solid #a8a8a8;
+    right: 18px;
+    top: 14px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.aBeforeLeft::before {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    left: 18px;
+    top: 17px;
+    border-top-color: #666;
+    border-right-color: #666;
+}
+
+.aBeforeLeft {
+    border: 0 none;
+    box-shadow: none;
+    background: none !important;
+    padding: 20px 30px;
+    left: 0;
+    top: 0;
+    font-weight: normal !important;
+}
+
+.aBeforeRight {
+    font-weight: normal !important;
+}
+
+/* 三角图标 End： */
+
+/* 右侧旋转三角 Begin： */
+.rotateIcon::after {
+    top: 50%;
+    margin-top: -6px;
+    right: 1px;
+    -webkit-transform: rotateZ(135deg);
+    -moz-transform: rotateZ(135deg);
+    -ms-transform: rotateZ(135deg);
+    -o-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+}
+
+.rotateIcon.show::after {
+    margin-top: -2px;
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+
+/* 右侧旋转三角 End： */
+
+.showDom {
+    display: block !important;
+}
+
+.hideDom {
+    display: none !important;
+}
+
+.disabled /* 禁用元素的点击事件 */
+{
+    pointer-events: none;
+}
+
+.no_padding {
+    padding: 0;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex_1 {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+}
