@@ -1,8 +1,11 @@
-# douban-project
+# 仿豆瓣APP
 
 > A Vue.js project
 
-## Build Setup
+## 效果图
+![效果图](https://github.com/Tomoaki-L/vueTest_douban/blob/master/src/assets/images/1.gif)
+
+### Build Setup
 
 ``` bash
 # install dependencies
