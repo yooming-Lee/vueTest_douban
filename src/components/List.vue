@@ -20,7 +20,7 @@
             </ul>
             <ul class="interests" v-if="type == 'interests'">
                 <li v-for="item in items" :style="{borderColor: item.color}">
-                    <a :href="item.href" v-if="!item.line" v-html="item.title" :style="{color: item.color}"></a>
+                    <a :href="item.href || item.url" v-if="!item.line" v-html="item.title" :style="{color: item.color}"></a>
                 </li>
             </ul>
         </div>
